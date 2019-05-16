@@ -1,6 +1,6 @@
 class List extends React.Component {
   constructor(){
-    super()
+    super(props)
     this.changeHandler = this.changeHandler.bind( this );
   }
 
@@ -16,6 +16,13 @@ class List extends React.Component {
 
   render() {
       // render the list with a map() here
+      const List = props => (
+  <ul>
+    {
+      props.items.map((item, index) => <li key={index}>{item}</li>)
+    }
+  </ul>
+);
 
       console.log("rendering");
       return (
@@ -31,4 +38,3 @@ ReactDOM.render(
     <List/>,
     document.getElementById('root')
 );
-
