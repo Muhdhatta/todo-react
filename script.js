@@ -27,12 +27,16 @@ class List extends React.Component {
       console.log("rendering");
       return (
         <div className="list">
-          <input onChange={this.changeHandler} value={this.state.word}/>
+          <input onChange={this.changeHandler} value={this.state.word}></input>
           <button>add item</button>
+          <button>add item</button>
+
+
         </div>
       );
   }
 }
+
 
 ReactDOM.render(
     <List/>,
